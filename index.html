@@ -140,7 +140,8 @@
                 </a>
                 <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download
                   class="download-btn">
-                  Download CV
+                  <span class="text-desktop">Download CV</span>
+                  <span class="text-mobile"><i class="ion-android-download"></i> CV</span>
                 </a>
               </div>
               <!-- End social links section -->
@@ -151,6 +152,7 @@
       <!--/ End Intro Skew Star /-->
 
       <!-- Styles -->
+      <!-- Estilos -->
       <style>
         /* Estilos específicos para telas maiores (PC) */
         @media (min-width: 769px) {
@@ -174,7 +176,6 @@
           .social-icon:hover {
             transform: scale(1.2);
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 1.0);
-            /* Brilho branco no hover */
           }
 
           .download-btn {
@@ -196,16 +197,22 @@
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.8);
-            /* Brilho branco ao passar o mouse */
+          }
+
+          /* Exibe o texto completo "Download CV" no PC */
+          .text-desktop {
+            display: inline;
+          }
+
+          .text-mobile {
+            display: none;
           }
         }
 
         /* Estilos específicos para dispositivos móveis (telémóveis) */
-        /* Estilos específicos para dispositivos móveis (telémóveis) */
         @media (max-width: 768px) {
           body {
             background-image: url('img/fundotele.jpg');
-            /* Remove o wallpaper cinza em dispositivos móveis */
           }
 
           .social-links {
@@ -218,47 +225,90 @@
 
           .social-icon {
             font-size: 4rem;
-            /* Tamanho do ícone */
             color: #000000;
-            /* Cor preta no interior dos ícones */
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.6);
-            /* Luz suave ao redor sem afetar o interior */
             transition: color 0.3s ease-in-out, transform 0.2s ease-in-out, text-shadow 0.3s;
             animation: glow-text 3s infinite ease-in-out;
-            /* Animação de luz pulsante nos ícones */
           }
 
           .social-icon:hover {
             color: #ffffff;
-            /* Mantém o interior preto no hover */
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6);
-            /* Luz mais intensa no hover */
             transform: scale(1.05);
-            /* Leve aumento de tamanho no hover */
           }
 
           .download-btn {
             background-color: #000000;
             color: #5f5f5f;
-            padding: 15px 30px;
-            border-radius: 30px;
+            padding: 0px 5px;
+            /* Margens menores */
+            border-radius: 20px;
+            /* Bordas arredondadas menores */
             border: 2px solid transparent;
             text-decoration: none;
             transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             animation: glow 3s infinite ease-in-out;
-            /* Animação de luz pulsante no botão */
           }
 
           .download-btn:hover {
             background-color: #ffffff;
             color: #5f5f5f;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
-            /* Luz suave ao redor no hover */
             transform: scale(1.05);
           }
+
+          /* Aumentar o ícone de download */
+          .text-mobile i {
+            font-size: 2.5rem;
+            margin-right: 10px;
+          }
+        }
+
+          /* Estilos específicos para dispositivos móveis (telémóveis) */
+          @media (max-width: 768px) {
+
+            .download-btn {
+              background-color: #000000;
+              color: #5f5f5f;
+              padding: 1px 6px;
+              border-radius: 20px;
+              border: 2px solid transparent;
+              text-decoration: none;
+              transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s;
+              font-weight: bold;
+              font-size: 1.1rem;
+              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+              animation: glow 3s infinite ease-in-out;
+
+              /* Flexbox para centralizar conteúdo verticalmente */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              /* Centraliza o ícone e o texto verticalmente */
+            }
+
+            /* Aumentar o ícone de download */
+            .text-mobile i {
+              font-size: 2.5rem;
+              margin-right: 10px;
+            }
+
+            /* Mostra apenas o ícone e "CV" em dispositivos móveis */
+            .text-desktop {
+              display: none;
+            }
+
+            .text-mobile {
+              display: flex;
+              align-items: center;
+              /* Centraliza verticalmente o ícone e o texto */
+              font-size: 1.8rem;
+            }
+          }
+
 
           /* Animação de luz pulsante para o botão de download */
           @keyframes glow {
@@ -272,7 +322,6 @@
             50% {
               box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.8);
               transform: scale(1.05);
-              /* Leve aumento no tamanho */
             }
           }
 
@@ -288,11 +337,11 @@
             50% {
               text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.8);
               transform: scale(1.05);
-              /* Leve aumento no tamanho */
             }
           }
-        }
       </style>
+
+
 
 
 
@@ -2950,112 +2999,70 @@
               }
             </style>
 
-            <footer style="background-color: #000; padding: 1rem 0; color: #fff;">
-              <div class="container d-flex justify-content-between align-items-center">
-                <p class="copyright" style="margin: 0;">Copyright © 2024. Todos os direitos reservados.</p>
-                <div class="d-flex align-items-center">
-                  <a href="https://www.linkedin.com/in/michaelteixeiranunes/" target="_blank"
-                    style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
-                    class="social-icon">
-                    <i class="ion-social-linkedin"></i>
-                  </a>
-                  <a href="https://github.com/mtn28" target="_blank"
-                    style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
-                    class="social-icon">
-                    <i class="ion-social-github"></i>
-                  </a>
-                  <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download
-                    id="download-cv"
-                    style="background-color: #ffffff; color: #000000; padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: all 0.3s; font-weight: bold; font-size: 0.9rem; border: none; margin-left: 10px;">
-                    <span class="text-download">Download CV</span>
-                  </a>
-                </div>
-              </div>
-            </footer>
+<footer style="background-color: #000; padding: 1rem 0; color: #fff;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <p class="copyright" style="margin: 0;">Copyright © 2024. Todos os direitos reservados.</p>
+    <div class="d-flex align-items-center">
+      <a href="https://www.linkedin.com/in/michaelteixeiranunes/" target="_blank"
+        style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
+        class="footer-icon">
+        <i class="ion-social-linkedin"></i>
+      </a>
+      <a href="https://github.com/mtn28" target="_blank"
+        style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
+        class="footer-icon">
+        <i class="ion-social-github"></i>
+      </a>
+      <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download
+        id="download-cv" class="footer-download-btn">
+        <i class="ion-android-download"></i> CV
+      </a>
+    </div>
+  </div>
+</footer>
+
 
 
 
             <style>
-              footer a:hover {
-                transform: scale(1.03);
-                /* Aumenta levemente o tamanho dos ícones e botão ao passar o mouse */
-              }
+/* Estilo para ícones e botão no footer */
+footer a:hover {
+  transform: scale(1.1);
+  /* Aumenta levemente o tamanho dos ícones e botão ao passar o mouse */
+}
 
-              .social-icon:hover {
-                transform: scale(1.1);
-                /* Aumenta levemente o tamanho dos ícones ao passar o mouse */
-              }
+.footer-icon:hover {
+  transform: scale(1.1);
+  /* Aumenta levemente o tamanho dos ícones ao passar o mouse */
+}
 
-              .socials a {
-                font-size: 1.8rem;
-                /* Aumenta o tamanho dos ícones */
-              }
+footer a {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  /* Estilo de texto do botão */
+}
 
-              /* Estilo adicional para o botão de download */
-              footer a {
-                font-family: Arial, sans-serif;
-                /* Tipografia do botão */
-                font-weight: bold;
-                /* Estilo do texto */
-              }
+.footer-download-btn {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1px 4px; /* Tamanho ajustado */
+  border-radius: 5px; /* Mantendo bordas arredondadas */
+  border: none;
+  text-decoration: none;
+  font-size: 1.2rem; /* Ajuste do tamanho da fonte */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo */
+  transition: transform 0.3s; /* Mantendo o efeito de hover original */
+  margin: 0 8px; /* Espaçamento consistente entre ícones e botão */
+  height: 28px; /* Altura ajustada para ser consistente */
+}
 
-              /* Estilo responsivo para telas menores */
-              @media (max-width: 768px) {
-                #download-cv {
-                  display: flex;
-                  align-items: center;
-                  padding: 6px 10px;
-                  font-size: 0.9rem;
-                }
+.footer-download-btn i {
+  font-size: 1.5rem; /* Tamanho do ícone de download */
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
 
-                /* Remove o texto completo "Download" e deixa só o ícone e "CV" em telas menores */
-                #download-cv .text-download {
-                  display: none;
-                  /* Remove o texto "Download CV" */
-                }
-
-                #download-cv::before {
-                  content: "\f019";
-                  /* Unicode do ícone de download (Font Awesome) */
-                  font-family: "Font Awesome 5 Free";
-                  font-weight: 900;
-                  margin-right: 5px;
-                  font-size: 1rem;
-                }
-
-                #download-cv::after {
-                  content: "CV";
-                  /* Apenas "CV" em vez de "Download CV" */
-                  font-size: 1rem;
-                }
-              }
-
-              /* Botão de voltar ao topo */
-              .back-to-top {
-                position: fixed;
-                bottom: 15px;
-                right: 15px;
-                background-color: #000;
-                color: #fff;
-                border: 2px solid #ffffff;
-                border-radius: 50%;
-                padding: 10px;
-                transition: transform 0.3s ease;
-                width: 44px;
-                height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              }
-
-              .back-to-top i {
-                font-size: 20px;
-                margin-bottom: 10px;
-              }
-
-              .back-to-top:hover {
-                transform: scale(1.1);
-              }
             </style>
 
             <!-- Adicione o Font Awesome se necessário -->
