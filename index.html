@@ -267,166 +267,191 @@
           }
         }
 
-          /* Estilos específicos para dispositivos móveis (telémóveis) */
-          @media (max-width: 768px) {
+        /* Estilos específicos para dispositivos móveis (telémóveis) */
+        @media (max-width: 768px) {
 
-            .download-btn {
-              background-color: #000000;
-              color: #5f5f5f;
-              padding: 1px 6px;
-              border-radius: 20px;
-              border: 2px solid transparent;
-              text-decoration: none;
-              transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s;
-              font-weight: bold;
-              font-size: 1.1rem;
-              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-              animation: glow 3s infinite ease-in-out;
+          .download-btn {
+            background-color: #000000;
+            color: #5f5f5f;
+            padding: 1px 6px;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            animation: glow 3s infinite ease-in-out;
 
-              /* Flexbox para centralizar conteúdo verticalmente */
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              /* Centraliza o ícone e o texto verticalmente */
-            }
-
-            /* Aumentar o ícone de download */
-            .text-mobile i {
-              font-size: 2.5rem;
-              margin-right: 10px;
-            }
-
-            /* Mostra apenas o ícone e "CV" em dispositivos móveis */
-            .text-desktop {
-              display: none;
-            }
-
-            .text-mobile {
-              display: flex;
-              align-items: center;
-              /* Centraliza verticalmente o ícone e o texto */
-              font-size: 1.8rem;
-            }
+            /* Flexbox para centralizar conteúdo verticalmente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Centraliza o ícone e o texto verticalmente */
           }
+
+          /* Aumentar o ícone de download */
+          .text-mobile i {
+            font-size: 2.5rem;
+            margin-right: 10px;
+          }
+
+          /* Mostra apenas o ícone e "CV" em dispositivos móveis */
+          .text-desktop {
+            display: none;
+          }
+
+          .text-mobile {
+            display: flex;
+            align-items: center;
+            /* Centraliza verticalmente o ícone e o texto */
+            font-size: 1.8rem;
+          }
+        }
 
 
         /* Animação de luz pulsante para o botão de download */
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.05), 0 0 5px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 0.15);
-    transform: scale(1);
-  }
+        @keyframes glow {
 
-  50% {
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 0 12px rgba(255, 255, 255, 0.25), 0 0 15px rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-  }
-}
+          0%,
+          100% {
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.05), 0 0 5px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 0.15);
+            transform: scale(1);
+          }
 
-/* Animação de luz pulsante para ícones sociais */
-@keyframes glow-text {
-  0%, 100% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.25);
-    transform: scale(1);
-  }
+          50% {
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 0 12px rgba(255, 255, 255, 0.25), 0 0 15px rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+          }
+        }
 
-  50% {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 12px rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.4);
-    transform: scale(1.05);
-  }
-}
+        /* Animação de luz pulsante para ícones sociais */
+        @keyframes glow-text {
 
+          0%,
+          100% {
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.25);
+            transform: scale(1);
+          }
+
+          50% {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 12px rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+          }
+        }
       </style>
 
 
 
 
 
-<section id="about" class="about-mf sect-pt4 route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a" data-aos="fade-up">Sobre</h3>
-          <p class="subtitle-a" data-aos="fade-up" data-aos-delay="100">
-            Informações essenciais sobre mim, desde o meu nome e contacto até às minhas principais qualidades e competências.
-          </p>
-          <div class="line-mf" data-aos="fade-up" data-aos-delay="200"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-shadow-full">
-            <div class="row">
-
-              <!-- Coluna Esquerda: Imagem e Informações -->
-              <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
-                <div class="row">
-                  <div class="col-12 col-sm-8 col-md-6">
-                    <div class="about-img text-left">
-                      <img src="img/fotoperfil.png" class="img-fluid rounded b-shadow-a img-left" alt="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="about-info mt-3">
-                  <p><span class="title-s" style="font-size: 1.1em;">Nome:</span> Michael Teixeira Nunes</p>
-                  <p><span class="title-s" style="font-size: 1.1em;">Perfil:</span> Estudante</p>
-                  <p><span class="title-s" style="font-size: 1.1em;">Email:</span> michael.teixeiranunes@outlook.com</p>
-                  <p><span class="title-s" style="font-size: 1.1em;">Telefone:</span> (+351) 967 407 603</p>
-                </div>
-
-                <div class="skill-mf mt-3">
-                  <p class="title-s" style="font-size: 1em;">Soft Skills:</p>
-                  <ul class="skills-list" style="font-size: 1em;">
-                    <li>Criativo</li>
-                    <li>Organizado</li>
-                    <li>Responsável</li>
-                    <li>Focado</li>
-                  </ul>
-                </div>
-
-                <div class="skill-mf mt-3">
-                  <p class="title-s" style="font-size: 1em;">Idiomas:</p>
-                  <ul class="skills-list" style="font-size: 1em;">
-                    <li>Português (Nativo)</li>
-                    <li>Alemão (C2)</li>
-                    <li>Inglês (C1)</li>
-                  </ul>
-                </div>
+      <section id="about" class="about-mf sect-pt4 route">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="title-box text-center">
+                <h3 class="title-a" data-aos="fade-up">Sobre</h3>
+                <p class="subtitle-a" data-aos="fade-up" data-aos-delay="100">
+                  Informações essenciais sobre mim, desde o meu nome e contacto até às minhas principais qualidades e
+                  competências.
+                </p>
+                <div class="line-mf" data-aos="fade-up" data-aos-delay="200"></div>
               </div>
-
-              <!-- Coluna Direita: Sobre mim -->
-              <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
-                <div class="about-me pt-4 pt-md-0">
-                  <div class="title-box-2">
-                    <h5 class="title-left" data-aos="fade-up" data-aos-delay="500">Sobre mim</h5>
-                  </div>
-                  <p class="lead" data-aos="fade-up" data-aos-delay="600">
-                    Olá! Sou o Michael Teixeira Nunes, tenho 24 anos e estou a finalizar a licenciatura em Tecnologias e Design de Multimédia no Instituto Politécnico de Viseu. Faltando apenas uma cadeira, estou à procura de um estágio ou emprego que me permita aplicar os conhecimentos adquiridos e ganhar experiência prática.
-                  </p>
-                  <p class="lead" data-aos="fade-up" data-aos-delay="600">
-                    Durante o meu percurso académico, desenvolvi competências em áreas como Design Multimédia, Programação, Bases de Dados e Computação Gráfica. Estou motivado para pôr em prática essas aprendizagens em projetos reais e inovadores.
-                  </p>
-                  <p class="lead" data-aos="fade-up" data-aos-delay="600">
-                    Procuro uma oportunidade que me permita crescer a nível pessoal e profissional, enquanto contribuo para o sucesso de projetos e equipas, finalizando a minha licenciatura.
-                  </p>
-                </div>
-              </div>
-
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-</section>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="box-shadow-full">
+                  <div class="row">
+
+                    <!-- Coluna Esquerda: Imagem e Informações -->
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+                      <div class="row">
+                        <div class="col-12 col-sm-8 col-md-6">
+                          <div class="about-img text-left">
+                            <img src="img/fotoperfil.png" class="img-fluid rounded b-shadow-a img-left" alt="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="about-info mt-3">
+                        <p><span class="title-s" style="font-size: 1.1em;">Nome:</span> Michael Teixeira Nunes</p>
+                        <p><span class="title-s" style="font-size: 1.1em;">Perfil:</span> Estudante</p>
+                        <p><span class="title-s" style="font-size: 1.1em;">Email:</span>
+                          michael.teixeiranunes@outlook.com</p>
+                        <p><span class="title-s" style="font-size: 1.1em;">Telefone:</span> (+351) 967 407 603</p>
+                      </div>
+
+                      <div class="skill-mf mt-3">
+                        <p class="title-s" style="font-size: 1em;">Soft Skills:</p>
+                        <ul class="skills-list" style="font-size: 1em;">
+                          <li>Criativo</li>
+                          <li>Organizado</li>
+                          <li>Responsável</li>
+                          <li>Focado</li>
+                        </ul>
+                      </div>
+
+                      <div class="skill-mf mt-3">
+                        <p class="title-s" style="font-size: 1em;">Idiomas:</p>
+                        <ul class="skills-list" style="font-size: 1em;">
+                          <li>Português (Nativo)</li>
+                          <li>Alemão (C2)</li>
+                          <li>Inglês (C1)</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Coluna Direita: Sobre mim -->
+                    <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+                      <div class="about-me pt-4 pt-md-0">
+                        <div class="title-box-2">
+                          <h5 class="title-left" data-aos="fade-up" data-aos-delay="500">Sobre mim</h5>
+                        </div>
+                        <p class="lead" data-aos="fade-up" data-aos-delay="600">
+                          Olá! Sou o Michael Teixeira Nunes, tenho 24 anos e estou a finalizar a licenciatura em
+                          Tecnologias e Design de Multimédia no Instituto Politécnico de Viseu. Faltando apenas uma
+                          cadeira, estou à procura de um estágio ou emprego que me permita aplicar os conhecimentos
+                          adquiridos e ganhar experiência prática.
+                        </p>
+                        <p class="lead" data-aos="fade-up" data-aos-delay="600">
+                          Durante o meu percurso académico, desenvolvi competências em áreas como Design Multimédia,
+                          Programação, Bases de Dados e Computação Gráfica. Estou motivado para pôr em prática essas
+                          aprendizagens em projetos reais e inovadores.
+                        </p>
+                        <p class="lead" data-aos="fade-up" data-aos-delay="600">
+                          Procuro uma oportunidade que me permita crescer a nível pessoal e profissional, enquanto
+                          contribuo para o sucesso de projetos e equipas, finalizando a minha licenciatura.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
 
 
 
       <style>
+        .box-shadow-full {
+          padding-top: 30px !important;
+          /* Reduz a margem interna superior */
+          padding-bottom: 20px !important;
+          /* Reduz a margem interna inferior */
+        }
+
+        @media (max-width: 768px) {
+  .box-shadow-full {
+    padding-top: 40px !important; /* Reduz ainda mais o padding superior em dispositivos móveis */
+    padding-bottom: 0px !important; /* Reduz o padding inferior em dispositivos móveis */
+  }
+}
+
         /* Skills List Styling */
         .skills-list {
           list-style-type: none;
@@ -465,11 +490,27 @@
           height: auto;
           /* Mantém a proporção da altura */
         }
+
+        @media (max-width: 768px) {
+  .about-img {
+    display: flex;
+    justify-content: center; /* Garante que a imagem esteja centrada horizontalmente */
+    align-items: center; /* Alinha a imagem verticalmente, se necessário */
+    text-align: center; /* Adicional para garantir centralização */
+  }
+
+  .img-left {
+    width: 100%; /* Ajusta a largura da imagem para 100% do contêiner */
+    max-width: 300px; /* Opcional: ajusta o tamanho máximo da imagem para dispositivos móveis */
+    height: auto; /* Mantém a proporção da altura */
+  }
+}
+
       </style>
 
 
       <!--/ Section Services Start /-->
-      <section id="service" class="services-mf route">
+      <section id="service" class="services-mf route" style="padding-top: 1.5rem;">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -824,7 +865,7 @@
 
 
       <!--/ Section Portfolio Star /-->
-      <section id="work" class="portfolio-mf" style="padding-top: 1rem;">
+      <section id="work" class="portfolio-mf" style="padding-top: 1.5rem;">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -2655,7 +2696,7 @@
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
-          <section id="certificates" class="certificates-mf route">
+          <section id="certificates" class="certificates-mf route" style="padding-top: 0.7rem;">
             <div class="container">
               <div class="row">
                 <div class="col-sm-12">
@@ -2864,7 +2905,7 @@
             }
           </style>
 
-          <section id="contact" class="portfolio-mf" style="padding-top: 1rem;">
+          <section id="contact" class="portfolio-mf" style="padding-top: 2.5rem;">
             <div class="container">
               <div class="row">
                 <div class="col-sm-12">
@@ -2974,70 +3015,78 @@
               }
             </style>
 
-<footer style="background-color: #000; padding: 1rem 0; color: #fff;">
-  <div class="container d-flex justify-content-between align-items-center">
-    <p class="copyright" style="margin: 0;">Copyright © 2024. Todos os direitos reservados.</p>
-    <div class="d-flex align-items-center">
-      <a href="https://www.linkedin.com/in/michaelteixeiranunes/" target="_blank"
-        style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
-        class="footer-icon">
-        <i class="ion-social-linkedin"></i>
-      </a>
-      <a href="https://github.com/mtn28" target="_blank"
-        style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
-        class="footer-icon">
-        <i class="ion-social-github"></i>
-      </a>
-      <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download
-        id="download-cv" class="footer-download-btn">
-        <i class="ion-android-download"></i> CV
-      </a>
-    </div>
-  </div>
-</footer>
+            <footer style="background-color: #000; padding: 1rem 0; color: #fff;">
+              <div class="container d-flex justify-content-between align-items-center">
+                <p class="copyright" style="margin: 0;">Copyright © 2024. Todos os direitos reservados.</p>
+                <div class="d-flex align-items-center">
+                  <a href="https://www.linkedin.com/in/michaelteixeiranunes/" target="_blank"
+                    style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
+                    class="footer-icon">
+                    <i class="ion-social-linkedin"></i>
+                  </a>
+                  <a href="https://github.com/mtn28" target="_blank"
+                    style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;"
+                    class="footer-icon">
+                    <i class="ion-social-github"></i>
+                  </a>
+                  <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download
+                    id="download-cv" class="footer-download-btn">
+                    <i class="ion-android-download"></i> CV
+                  </a>
+                </div>
+              </div>
+            </footer>
 
 
 
 
             <style>
-/* Estilo para ícones e botão no footer */
-footer a:hover {
-  transform: scale(1.1);
-  /* Aumenta levemente o tamanho dos ícones e botão ao passar o mouse */
-}
+              /* Estilo para ícones e botão no footer */
+              footer a:hover {
+                transform: scale(1.1);
+                /* Aumenta levemente o tamanho dos ícones e botão ao passar o mouse */
+              }
 
-.footer-icon:hover {
-  transform: scale(1.1);
-  /* Aumenta levemente o tamanho dos ícones ao passar o mouse */
-}
+              .footer-icon:hover {
+                transform: scale(1.1);
+                /* Aumenta levemente o tamanho dos ícones ao passar o mouse */
+              }
 
-footer a {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  /* Estilo de texto do botão */
-}
+              footer a {
+                font-family: Arial, sans-serif;
+                font-weight: bold;
+                /* Estilo de texto do botão */
+              }
 
-.footer-download-btn {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 1px 4px; /* Tamanho ajustado */
-  border-radius: 5px; /* Mantendo bordas arredondadas */
-  border: none;
-  text-decoration: none;
-  font-size: 1.2rem; /* Ajuste do tamanho da fonte */
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza o conteúdo */
-  transition: transform 0.3s; /* Mantendo o efeito de hover original */
-  margin: 0 8px; /* Espaçamento consistente entre ícones e botão */
-  height: 28px; /* Altura ajustada para ser consistente */
-}
+              .footer-download-btn {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 1px 4px;
+                /* Tamanho ajustado */
+                border-radius: 5px;
+                /* Mantendo bordas arredondadas */
+                border: none;
+                text-decoration: none;
+                font-size: 1.2rem;
+                /* Ajuste do tamanho da fonte */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* Centraliza o conteúdo */
+                transition: transform 0.3s;
+                /* Mantendo o efeito de hover original */
+                margin: 0 8px;
+                /* Espaçamento consistente entre ícones e botão */
+                height: 28px;
+                /* Altura ajustada para ser consistente */
+              }
 
-.footer-download-btn i {
-  font-size: 1.5rem; /* Tamanho do ícone de download */
-  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
-}
-
+              .footer-download-btn i {
+                font-size: 1.5rem;
+                /* Tamanho do ícone de download */
+                margin-right: 5px;
+                /* Espaçamento entre o ícone e o texto */
+              }
             </style>
 
             <!-- Adicione o Font Awesome se necessário -->
