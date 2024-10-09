@@ -38,56 +38,74 @@
 
 <body id="page-top">
 
-  <!--/ Nav Start /-->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">MICHAEL NUNES</a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault"
-        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- Adicionando 3 spans para o ícone do hamburguer -->
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Competências</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Projetos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#certificates">Certificados</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!--/ Nav End /-->
+  <body id="page-top">
 
-  <!-- Estilos para desktop -->
-  <style>
-    @media (min-width: 769px) {
-      .intro.route.bg-image {
-        background-image: url('img/bck1.jpg');
-        /* Imagem de fundo para desktop */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+    <!--/ Nav Start /-->
+    <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll" href="#page-top">MICHAEL NUNES</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault"
+          aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Adicionando 3 spans para o ícone do hamburguer -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link js-scroll active" href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#about">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#service">Competências</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#work">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#certificates">Certificados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--/ Nav End /-->
+  
+    <!-- Estilos para desktop -->
+    <style>
+      @media (min-width: 769px) {
+        .intro.route.bg-image {
+          background-image: url('img/bck1.jpg');
+          /* Imagem de fundo para desktop */
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
       }
-    }
-  </style>
+    </style>
+  
+    <!-- Estilos para dispositivos móveis -->
+    <style>
+      /* Estilo para dispositivos móveis */
+      @media (max-width: 768px) {
+        .intro.route.bg-image {
+          background-color: #000000;
+          /* Substitua com a cor desejada */
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          /* Scrollable em dispositivos móveis */
+        }
+      }
+    </style>
 
   <!-- Estilos para dispositivos móveis -->
   <style>
@@ -192,7 +210,7 @@
     }
 
     body {
-      background: url('link-para-seu-wallpaper-cinza') no-repeat center center fixed;
+      background: none;
       background-size: cover;
     }
   }
@@ -200,8 +218,8 @@
   /* Estilos específicos para dispositivos móveis (telémóveis) */
 @media (max-width: 768px) {
   body {
-    background-color: #000000; /* Fundo preto para mobile */
-    background-image: none; /* Remove o wallpaper cinza em dispositivos móveis */
+    
+    background-image: url('../Michael-Nunes-Web-CV/img/fundotele.jpg'); /* Remove o wallpaper cinza em dispositivos móveis */
   }
 
   .social-links {
