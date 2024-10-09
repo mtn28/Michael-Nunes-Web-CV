@@ -94,7 +94,7 @@
     /* Estilo para dispositivos móveis */
     @media (max-width: 768px) {
       .intro.route.bg-image {
-        background-color: #3c3333;
+        background-color: #000000;
         /* Substitua com a cor desejada */
         background-size: cover;
         background-position: center;
@@ -110,99 +110,144 @@
 
   <body>
 
-    <!--/ Intro Skew Star /-->
-    <div id="home" class="intro route bg-image">
-      <div class="overlay-itro"></div>
-      <div class="intro-content display-table">
-        <div class="table-cell">
-          <div class="container">
-            <h1 class="intro-title mb-4">Bem-vindo ao meu Currículo!</h1>
-            <p class="intro-subtitle">
-              <span class="text-slider-items">
-                Design Web, Desenvolvimento Web, Design de produtos multimédia, Design de aplicações para dispositivos
-                móveis,
-                Autoria de conteúdos multimédia 2D e 3D, Desenvolvimento de produtos multimédia,
-                Desenvolvimento de aplicações para dispositivos móveis, Desenvolvimento de ambientes e animações 3D,
-                Gestão de projetos multimédia
-              </span>
-              <strong class="text-slider"></strong>
-            </p>
-            <!-- Social links section -->
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/michaelteixeiranunes/" target="_blank" class="social-icon">
-                <i class="ion-social-linkedin"></i>
-              </a>
-              <a href="https://github.com/mtn28" target="_blank" class="social-icon">
-                <i class="ion-social-github"></i>
-              </a>
-              <a href="caminho/do/seu/curriculo.pdf" download class="download-btn">
-                Download CV
-              </a>
-            </div>
-            <!-- End social links section -->
-          </div>
+   <!--/ Intro Skew Star /-->
+<div id="home" class="intro route bg-image">
+  <div class="overlay-itro"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h1 class="intro-title mb-4">Bem-vindo ao meu Currículo!</h1>
+        <p class="intro-subtitle">
+          <span class="text-slider-items">
+            Design Web, Desenvolvimento Web, Design de produtos multimédia, Design de aplicações para dispositivos móveis,
+            Autoria de conteúdos multimédia 2D e 3D, Desenvolvimento de produtos multimédia,
+            Desenvolvimento de aplicações para dispositivos móveis, Desenvolvimento de ambientes e animações 3D,
+            Gestão de projetos multimédia
+          </span>
+          <strong class="text-slider"></strong>
+        </p>
+        <!-- Social links section -->
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/michaelteixeiranunes/" target="_blank" class="social-icon">
+            <i class="ion-social-linkedin"></i>
+          </a>
+          <a href="https://github.com/mtn28" target="_blank" class="social-icon">
+            <i class="ion-social-github"></i>
+          </a>
+          <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download class="download-btn">
+            Download CV
+          </a>
         </div>
+        <!-- End social links section -->
       </div>
     </div>
-    <!--/ End Intro Skew Star /-->
+  </div>
+</div>
+<!--/ End Intro Skew Star /-->
 
-    <!-- Styles -->
-    <style>
-      /* Social links section styling */
-      .social-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 60px;
-        /* Espaçamento generoso */
-        gap: 40px;
-        /* Espaço generoso entre os ícones */
-      }
+<!-- Styles -->
+<style>
+  /* Estilos específicos para telas maiores (PC) */
+  @media (min-width: 769px) {
+    /* Social links section styling para PC */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      gap: 40px;
+    }
 
-      .social-icon {
-        font-size: 3rem;
-        /* Aumenta o tamanho dos ícones */
-        color: #fff;
-        text-decoration: none;
-        transition: transform 0.3s ease-in-out;
-      }
+    .social-icon {
+      font-size: 4rem;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.3s ease-in-out;
+    }
 
-      .social-icon:hover {
-        transform: scale(1.2);
-        /* Leve aumento no hover */
-      }
+    .social-icon:hover {
+      transform: scale(1.2);
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 1.0); /* Brilho branco no hover */
+    }
 
-      .download-btn {
-        background-color: #fff;
-        color: #000;
-        padding: 15px 30px;
-        border-radius: 30px;
-        /* Bordas arredondadas no botão */
-        border: 2px solid transparent;
-        /* Remove o contorno no hover */
-        text-decoration: none;
-        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-        font-weight: bold;
-        font-size: 1.2rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        /* Sombra leve */
-      }
+    .download-btn {
+      background-color: #fff;
+      color: #6a6a6c;
+      padding: 15px 30px;
+      border-radius: 30px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-      .download-btn:hover {
-        background-color: #000;
-        color: #fff;
-        transform: scale(1.05);
-        /* Leve aumento no hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        /* Sombra mais forte no hover */
-      }
-      #service {
-  margin-top: 20px; /* Adicione mais espaço antes da seção Competências */
-}
+    .download-btn:hover {
+      background-color: #000;
+      color: #6a6a6c;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.8); /* Brilho branco ao passar o mouse */
+    }
 
-      
-    </style>
-    
+    body {
+      background: url('link-para-seu-wallpaper-cinza') no-repeat center center fixed;
+      background-size: cover;
+    }
+  }
+
+  /* Estilos específicos para dispositivos móveis (telémóveis) */
+@media (max-width: 768px) {
+  body {
+    background-color: #000000; /* Fundo preto para mobile */
+    background-image: none; /* Remove o wallpaper cinza em dispositivos móveis */
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+  }
+
+  .social-icon {
+    font-size: 4rem; /* Tamanho do ícone */
+    color: #404040; /* Cor inicial */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out, text-shadow 0.3s;
+  }
+
+  .social-icon:hover {
+    color: #ffffff; /* Mudança de cor no hover */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 0 25px rgba(255, 255, 255, 0.3); /* Brilho branco no hover */
+    transform: scale(1.05); /* Leve aumento de tamanho no hover */
+  }
+
+  .download-btn {
+    background-color: #404040;
+    color: #000000;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .download-btn:hover {
+    background-color: #ffffff;
+    color: #121212;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 0 25px rgba(255, 255, 255, 0.3); /* Brilho branco no hover */
+    transform: scale(1.05);
+  }
+} /* Aqui está a chave de fechamento faltante */
+
+</style>
+
 
 
     <section id="about" class="about-mf sect-pt4 route">
@@ -2815,7 +2860,7 @@
                             style="margin: 0 5px; color: #000; font-size: 1.5rem; transition: transform 0.3s;">
                             <span class="ico-circle"><i class="ion-social-github"></i></span>
                           </a>
-                          <a href="caminho/do/seu/curriculo.pdf" download
+                          <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download
                             style="background-color: #000; color: #fff; padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: all 0.3s; font-weight: bold; font-size: 0.9rem; border: none; margin-left: 5px;">
                             Download CV
                           </a>
@@ -2852,10 +2897,10 @@
          style="margin: 0 10px; color: #fff; font-size: 1.8rem; transition: transform 0.3s;" class="social-icon">
         <i class="ion-social-github"></i>
       </a>
-      <a href="caminho/do/seu/curriculo.pdf" download id="download-cv"
-         style="background-color: #ffffff; color: #000000; padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: all 0.3s; font-weight: bold; font-size: 0.9rem; border: none; margin-left: 10px;">
-        <span class="text-download">Download CV</span>
-      </a>
+      <a href="https://drive.google.com/uc?export=download&id=1xBrWelywy5CfUWUgtaz0xT2j0XwBfkr1" download id="download-cv"
+      style="background-color: #ffffff; color: #000000; padding: 8px 15px; border-radius: 5px; text-decoration: none; transition: all 0.3s; font-weight: bold; font-size: 0.9rem; border: none; margin-left: 10px;">
+      <span class="text-download">Download CV</span>
+   </a>   
     </div>
   </div>
 </footer>
