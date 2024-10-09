@@ -10,7 +10,7 @@
 ======================================*/
 /* Imagem de fundo para desktop */
 body {
-  background-image: url('img/bck1.jpg'); /* Imagem de fundo para desktop */
+  background-image: url('../img/bck1.jpg'); /* Imagem de fundo para desktop */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@ body {
 /* Media query para dispositivos móveis */
 @media (max-width: 768px) {
   body {
-    background-image: url('../img/fundotele.jpg');
+    background-image: url('../img/bck1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
