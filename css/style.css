@@ -22,6 +22,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+    background-image: url('../img/fundotele.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Scrollable em dispositivos móveis */
+    height: auto;
+  }
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   color: #1e1e1e;
 }
