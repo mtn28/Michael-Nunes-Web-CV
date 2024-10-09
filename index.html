@@ -192,7 +192,7 @@
 
           .download-btn:hover {
             background-color: #000;
-            color: #6a6a6c;
+            color: #a7a7a8;
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.8);
@@ -201,86 +201,97 @@
         }
 
         /* Estilos específicos para dispositivos móveis (telémóveis) */
-       /* Estilos específicos para dispositivos móveis (telémóveis) */
-@media (max-width: 768px) {
-  body {
-    background-image: url('img/fundotele.jpg');
-    /* Remove o wallpaper cinza em dispositivos móveis */
-  }
+        /* Estilos específicos para dispositivos móveis (telémóveis) */
+        @media (max-width: 768px) {
+          body {
+            background-image: url('img/fundotele.jpg');
+            /* Remove o wallpaper cinza em dispositivos móveis */
+          }
 
-  .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    gap: 40px;
-  }
+          .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            gap: 40px;
+          }
 
-  .social-icon {
-    font-size: 4rem;
-    /* Tamanho do ícone */
-    color: #000000; /* Cor preta no interior dos ícones */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.6);
-    /* Luz suave ao redor sem afetar o interior */
-    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out, text-shadow 0.3s;
-    animation: glow-text 3s infinite ease-in-out; /* Animação de luz pulsante nos ícones */
-  }
+          .social-icon {
+            font-size: 4rem;
+            /* Tamanho do ícone */
+            color: #000000;
+            /* Cor preta no interior dos ícones */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.6);
+            /* Luz suave ao redor sem afetar o interior */
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out, text-shadow 0.3s;
+            animation: glow-text 3s infinite ease-in-out;
+            /* Animação de luz pulsante nos ícones */
+          }
 
-  .social-icon:hover {
-    color: #ffffff; /* Mantém o interior preto no hover */
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6);
-    /* Luz mais intensa no hover */
-    transform: scale(1.05);
-    /* Leve aumento de tamanho no hover */
-  }
+          .social-icon:hover {
+            color: #ffffff;
+            /* Mantém o interior preto no hover */
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6);
+            /* Luz mais intensa no hover */
+            transform: scale(1.05);
+            /* Leve aumento de tamanho no hover */
+          }
 
-  .download-btn {
-    background-color: #000000;
-    color: #5f5f5f;
-    padding: 15px 30px;
-    border-radius: 30px;
-    border: 2px solid transparent;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    animation: glow 3s infinite ease-in-out; /* Animação de luz pulsante no botão */
-  }
+          .download-btn {
+            background-color: #000000;
+            color: #5f5f5f;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            animation: glow 3s infinite ease-in-out;
+            /* Animação de luz pulsante no botão */
+          }
 
-  .download-btn:hover {
-    background-color: #ffffff;
-    color: #5f5f5f;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
-    /* Luz suave ao redor no hover */
-    transform: scale(1.05);
-  }
+          .download-btn:hover {
+            background-color: #ffffff;
+            color: #5f5f5f;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 0 25px rgba(255, 255, 255, 0.3);
+            /* Luz suave ao redor no hover */
+            transform: scale(1.05);
+          }
 
-  /* Animação de luz pulsante para o botão de download */
-  @keyframes glow {
-    0%, 100% {
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.3);
-      transform: scale(1);
-    }
-    50% {
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.8);
-      transform: scale(1.05); /* Leve aumento no tamanho */
-    }
-  }
+          /* Animação de luz pulsante para o botão de download */
+          @keyframes glow {
 
-  /* Animação de luz pulsante para ícones sociais */
-  @keyframes glow-text {
-    0%, 100% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.6);
-      transform: scale(1);
-    }
-    50% {
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.8);
-      transform: scale(1.05); /* Leve aumento no tamanho */
-    }
-  }
-}
+            0%,
+            100% {
+              box-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.3);
+              transform: scale(1);
+            }
 
+            50% {
+              box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.8);
+              transform: scale(1.05);
+              /* Leve aumento no tamanho */
+            }
+          }
+
+          /* Animação de luz pulsante para ícones sociais */
+          @keyframes glow-text {
+
+            0%,
+            100% {
+              text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.6);
+              transform: scale(1);
+            }
+
+            50% {
+              text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.8);
+              transform: scale(1.05);
+              /* Leve aumento no tamanho */
+            }
+          }
+        }
       </style>
 
 
