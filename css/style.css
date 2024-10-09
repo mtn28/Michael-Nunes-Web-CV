@@ -10,7 +10,7 @@
 ======================================*/
 /* Imagem de fundo para desktop */
 body {
-  background-image: url('../img/bck1.jpg'); /* Imagem de fundo para desktop */
+  background-image: url('img/bck1.jpg'); /* Imagem de fundo para desktop */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
