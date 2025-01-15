@@ -2728,13 +2728,13 @@
               /* Adicione mais espaço antes da seção Certificações */
             }
 
-            /* Botões do Carousel - Compactos e Estilizados */
+            /* Botões do Carousel - Compactos e Responsivos */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 50px; /* Largura fixa */
-  height: 50px; /* Altura fixa */
+  width: 40px; /* Largura reduzida */
+  height: 40px; /* Altura reduzida */
   background: linear-gradient(135deg, #000, #444); /* Gradiente para o fundo */
-  border-radius: 50%; /* Botão redondo */
+  border-radius: 10px; /* Bordas arredondadas, não circulares */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2743,20 +2743,20 @@
   transform: translateY(-50%);
   z-index: 1040; /* Mantém acima do conteúdo */
   transition: all 0.3s ease; /* Transição suave */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background: linear-gradient(135deg, #555, #999); /* Gradiente mais claro no hover */
-  transform: translateY(-50%) scale(1.1); /* Aumenta levemente no hover */
+  transform: translateY(-50%) scale(1.1); /* Leve aumento no hover */
 }
 
 /* Ícones dos Botões */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 20px; /* Ajusta o tamanho dos ícones */
-  height: 20px;
+  width: 18px; /* Ajusta o tamanho dos ícones */
+  height: 18px;
   background-color: transparent; /* Remove o fundo padrão */
   background-size: contain; /* Ajusta o tamanho dos ícones */
   transition: transform 0.3s ease; /* Adiciona um efeito de zoom */
@@ -2769,11 +2769,27 @@
 
 /* Posição Personalizada */
 .carousel-control-prev {
-  left: 10px; /* Ajusta a distância da borda esquerda */
+  left: 10px; /* Alinha à esquerda */
 }
 
 .carousel-control-next {
-  right: 10px; /* Ajusta a distância da borda direita */
+  right: 10px; /* Alinha à direita */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 30px; /* Reduz largura em dispositivos móveis */
+    height: 30px; /* Reduz altura em dispositivos móveis */
+    top: 50%; /* Mantém centralizado verticalmente */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 14px; /* Ícones menores */
+    height: 14px;
+  }
 }
 
           </style>
