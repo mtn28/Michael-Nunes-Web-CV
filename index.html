@@ -2792,6 +2792,25 @@
   }
 }
 
+/* Estilo para o botão de Expandir em dispositivos móveis */
+@media (max-width: 768px) {
+  .btn-expand {
+    width: 35px; /* Reduz tamanho geral */
+    height: 35px;
+    padding: 8px;
+    font-size: 16px; /* Ícone menor */
+    bottom: 10px; /* Ajusta posição */
+    right: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais sutil */
+  }
+
+  .btn-expand:hover {
+    transform: scale(1.15); /* Suave crescimento no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Destaque no hover */
+  }
+}
+
+
           </style>
 
           <!-- Adicionar AOS e Animate.css -->
