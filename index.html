@@ -792,41 +792,69 @@
       </div>
 
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const categories = document.querySelectorAll(".category");
+   document.addEventListener("DOMContentLoaded", function () {
+  const categories = document.querySelectorAll(".category");
 
-          const animateProgressBars = (category) => {
-            const bars = category.querySelectorAll(".progress-bar");
-            bars.forEach((bar) => {
-              const value = bar.getAttribute("aria-valuenow");
-              bar.style.width = `${value}%`;
-            });
-          };
+  const animateProgressBars = (category) => {
+    const bars = category.querySelectorAll(".progress-bar");
+    bars.forEach((bar, index) => {
+      const value = bar.getAttribute("aria-valuenow");
+      bar.style.width = `${value}%`;
 
-          const resetProgressBars = (category) => {
-            const bars = category.querySelectorAll(".progress-bar");
-            bars.forEach((bar) => {
-              bar.style.width = "0%";
-            });
-          };
+      // Encontrar o elemento de texto percentual correspondente
+      const percentSpan = bar.closest(".progress").previousElementSibling;
 
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                  animateProgressBars(entry.target);
-                } else {
-                  entry.target.classList.remove("visible");
-                  resetProgressBars(entry.target);
-                }
-              });
-            },
-            { threshold: 0.5 }
-          );
+      if (percentSpan && percentSpan.classList.contains("pull-right")) {
+        animateNumber(percentSpan, value);
+      }
+    });
+  };
 
-          categories.forEach((category) => observer.observe(category));
-        });
+  const resetProgressBars = (category) => {
+    const bars = category.querySelectorAll(".progress-bar");
+    bars.forEach((bar) => {
+      bar.style.width = "0%";
+
+      // Resetar o número para 0
+      const percentSpan = bar.closest(".progress").previousElementSibling;
+      if (percentSpan && percentSpan.classList.contains("pull-right")) {
+        percentSpan.textContent = "0%";
+      }
+    });
+  };
+
+  const animateNumber = (element, finalValue) => {
+    let currentValue = 0;
+    const duration = 1000; // Duração da animação em milissegundos
+    const stepTime = Math.abs(Math.floor(duration / finalValue));
+
+    const interval = setInterval(() => {
+      currentValue += 1;
+      element.textContent = `${currentValue}%`;
+
+      if (currentValue >= finalValue) {
+        clearInterval(interval);
+      }
+    }, stepTime);
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          animateProgressBars(entry.target);
+        } else {
+          entry.target.classList.remove("visible");
+          resetProgressBars(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  categories.forEach((category) => observer.observe(category));
+});
       </script>
 
 
@@ -2699,6 +2727,55 @@
               margin-top: 35px;
               /* Adicione mais espaço antes da seção Certificações */
             }
+
+            /* Botões do Carousel - Compactos e Estilizados */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px; /* Largura fixa */
+  height: 50px; /* Altura fixa */
+  background: linear-gradient(135deg, #000, #444); /* Gradiente para o fundo */
+  border-radius: 50%; /* Botão redondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%; /* Centralizado verticalmente */
+  transform: translateY(-50%);
+  z-index: 1040; /* Mantém acima do conteúdo */
+  transition: all 0.3s ease; /* Transição suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: linear-gradient(135deg, #555, #999); /* Gradiente mais claro no hover */
+  transform: translateY(-50%) scale(1.1); /* Aumenta levemente no hover */
+}
+
+/* Ícones dos Botões */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px; /* Ajusta o tamanho dos ícones */
+  height: 20px;
+  background-color: transparent; /* Remove o fundo padrão */
+  background-size: contain; /* Ajusta o tamanho dos ícones */
+  transition: transform 0.3s ease; /* Adiciona um efeito de zoom */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  transform: scale(1.2); /* Aumenta os ícones ao passar o mouse */
+}
+
+/* Posição Personalizada */
+.carousel-control-prev {
+  left: 10px; /* Ajusta a distância da borda esquerda */
+}
+
+.carousel-control-next {
+  right: 10px; /* Ajusta a distância da borda direita */
+}
+
           </style>
 
           <!-- Adicionar AOS e Animate.css -->
